@@ -20,40 +20,50 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/[TomekK]
 *******************************************************************************
 ''')
-print("Hi" +" " + input("what is your name: "))
-print("welcome to treasure island.")
-print("your mission is to find the treasure!!" )
+def play():
+    print("welcome to treasure island.")
+    print("your mission is to find the treasure!!" )
 
 
 
-print('you are at a river cross road, where do you want to go ? "left" or "right" ')
-choice_1 = input('what move do you wish to make ? "left" or "right"\n ').lower()
-if choice_1 == "left" :
-    print('##. you have successfully gotten to the beach where the treasure is located ,you are to get to the other side of the island through the beach to get your treasure."swim" or "wait for a boat." !')
-    choice_2 = input('what move do you wish to make? "swim" or "wait"\n ').lower()
+    print('you are at a river cross road, where do you want to go ? "left" or "right" ')
+    choice_1 = input('what move do you wish to make ? "left" or "right"\n ').lower()
+    if choice_1 == "left" :
+        print('##. you have successfully gotten to the beach where the treasure is located ,you are to get to the other side of the island through the beach to get your treasure."swim" or "wait for a boat." !')
+        choice_2 = input('what move do you wish to make? "swim" or "wait"\n ').lower()
 
-    if choice_2 == "wait" :
-        print('##. you have successfully gotten to the other side of the island, you are to open a door with different colours:("red" , "blue" , "yellow") ')
-        choice_3 = input('what colour of door do wish to open ? "red","blue","yellow".\n ').lower()
+        if choice_2 == "wait" :
+            print('##. you have successfully gotten to the other side of the island, you are to open a door with different colours:("red" , "blue" , "yellow") ')
+            choice_3 = input('what colour of door do wish to open ? "red","blue","yellow".\n ').lower()
 
-        if choice_3 == "yellow" :
-            print("##. you got the treasure,hurray you are a gem!!! ")
-        elif choice_3 == "blue" :
-            print("##. you fell into a room filled with acid, game over!!")
-        elif choice_3 == "red" :
-            print("##. you fell into a den of lions, game over!! ")
+            if choice_3 == "yellow" :
+                print("##. you got the treasure,hurray you are a gem!!! ")
+            elif choice_3 == "blue" :
+                print("##. you fell into a room filled with acid, game over!!")
+            elif choice_3 == "red" :
+                print("##. you fell into a den of lions, game over!! ")
+            else :
+                print("##. you chose a door that does not exit. game over!!")
         else :
-            print("##. you chose a door that does not exit. game over!!")
+            print("##. you got eaten by crocodies, game over!! ")
     else :
-        print("##. you got eaten by crocodies, game over!! ")
-else :
-    print("##. you fell into a pot hole , game over!! ")
+        print("##. you fell into a pot hole , game over!! ")
 
 
 
 
 
-input("\npress enter to exit...")
+
+name = input("what is your name: ")
+print("Hi " + name)
+
+while True:
+    play()
+    again = input("\nDo you want to play again? (yes/no): ").lower().strip()
+    if again not in ("yes", "y"):
+        break
+
+input("\nthanks for playing, press enter to exit...")
 
 # print("you are at a river cross road, where do you want to go ? left or right." )
 # input('where do you want to go? "left" or "right".')
