@@ -20,7 +20,9 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/[TomekK]
 *******************************************************************************
 ''')
-def play():
+print("Hi" +" " + input("what is your name: "))
+playing = "yes"
+while playing == "yes":
     print("welcome to treasure island.")
     print("your mission is to find the treasure!!" )
 
@@ -48,22 +50,10 @@ def play():
             print("##. you got eaten by crocodies, game over!! ")
     else :
         print("##. you fell into a pot hole , game over!! ")
+    playing = input('do you want to play again? "yes" or "no"\n ').lower()
 
 
-
-
-
-
-name = input("what is your name: ")
-print("Hi " + name)
-
-while True:
-    play()
-    again = input("\nDo you want to play again? (yes/no): ").lower().strip()
-    if again not in ("yes", "y"):
-        break
-
-input("\nthanks for playing, press enter to exit...")
+input("\npress enter to exit...")
 
 # print("you are at a river cross road, where do you want to go ? left or right." )
 # input('where do you want to go? "left" or "right".')
